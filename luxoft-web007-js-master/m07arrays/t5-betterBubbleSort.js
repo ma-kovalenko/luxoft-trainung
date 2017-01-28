@@ -11,7 +11,7 @@
     // do not check area that you already sorted
 
     function bubbleSort(arr){ 
-        var n = arr.length; 
+        var n = arr.length;
         for (var i = 0; i < n-1; i++) { 
             for (var j = 0; j < n-1-i; j++) {
                 swap(arr, j, j + 1);
@@ -25,6 +25,7 @@
     function swap(arr, pos1, pos2){
         
         if (arr[pos1] > arr[pos2]){
+            
             var tempPos = arr[pos1];
             arr[pos1] = arr[pos2];
             arr[pos2] = tempPos; 
