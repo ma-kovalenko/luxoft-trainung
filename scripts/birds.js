@@ -6,6 +6,10 @@
 
 (function (){
     
+    One Bird [type,price,count,sold];
+    
+    stock [[type,price,count,sold],[type,price,count,sold],[type,price,count,sold]];
+    
     var allBirdsType = [];
     
     var allBirdsCount  = [];
@@ -29,8 +33,6 @@
     
     sellBirdfromStock("gus", 10);
     console.log(allBirdsCount);
-    
-    
   
     
     /* Add Birds TypeMethod */
