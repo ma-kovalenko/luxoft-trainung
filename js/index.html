@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Java Script Courses</title>
+</head>
+<body>
+	<div id="example">
+		
+	</div>
+</body>
+<!-- <script src="scripts/t0-retirementPlan.js"></script>-->
+<!-- <script src="scripts/birds.js"></script> -->
+<script>
+	var note = {
+		color: "blue",
+		listType : "kletka",
+		openNote: function () {
+			console.log("Note open");
+		}
+	}
+	
+	note.openNote();
+	
+	// Экономим память
+	
+	function Animal (id, type) {
+		this.id = id;
+		this.type = type;
+	}
+	
+	Animal.prototype.countOfLegs = 4;
+	
+	Animal.prototype.toString = function () {
+		return "id " + this.id + ", name " + this.type;
+	}
+	
+	var cat1 = new Animal(12,"Cat");
+	var cat2 = new Animal(13,"Catc");
+	
+	console.log(cat1.countOfLegs);
+	console.log(cat2.countOfLegs);
+	
+	Animal.prototype.countOfLegs = 10;
+	
+	console.log(cat1.countOfLegs);
+	console.log(cat2.countOfLegs);
+	
+	
+	 for(var i = 0; i < 10; i++) {
+    
+		for(var j = i; j < 10; j++) {
+			if (j > 3) break;   // Quit the innermost loop
+			if (i == 2) break;  // Do the same thing
+			if (i == 4) break;  // Quit the outer loop
+			document.write("i = " + i + " j = " + j + "<br>");
+		}
+  	}
+  	document.write("FINAL i = " + i + " j = " + j + "<br>");
+	
+	//д.з
+	
+	//посмортеть обьекти и поиграть с ним
+	
+	
+	/* Функция обхода дерева чисел */
+	// 8 9
+	// 6 
+	// 3 5
+	// 1
+	
+		// var Node = {
+			// n:0,
+			// left{
+				// node{
+					// n: 
+				// }
+			// },
+			// left {
+				// node {
+				// }
+			// }
+		// }
+	
+	/* Function always have arguments  */
+	
+	function Test() {
+		this.id = arguments[0];
+		this.type = arguments[1];
+		
+		this.toString = function () {
+			return "id " + this.id + " Type:" + this.type;
+		}
+	}
+	
+	var ttt = new Test (13,"Cat");
+	
+	console.log (ttt.toString());
+	
+	/* Using Function */
+	
+	function printLn (data) {
+		console.log(data);
+	}
+	
+	function printArray (arr, printFn) {
+		for (var i = 0; i < arr.length; i++) {
+			if (printFn == undefined) {
+				console.log ("please provide print fn");
+				return;
+			}
+			printFn (arr[i]);
+		}
+	}
+	
+	printArray([1,2,3], printLn);
+	
+	
+	
+	
+	
+</script>
+</html>

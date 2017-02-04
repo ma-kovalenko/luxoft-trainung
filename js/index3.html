@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Java Script Courses</title>
+</head>
+<body>
+	<div id="example">
+		
+	</div>
+</body>
+<!-- <script src="scripts/t0-retirementPlan.js"></script>-->
+<!-- <script src="scripts/birds.js"></script> -->
+<script>
+
+	// function Parent () {
+		// this.descr = "parent";
+		// this.id = 23;
+		
+		// this.toString = function () {
+			// return this.descr;
+		// }
+	// }
+	
+	// function Child (w,h) {
+		// this.descr = "child";
+		// this.age = 12;
+	// }
+	
+	// Child.prototype = new Parent(w,h);
+	
+	// obj = new Child();
+	
+	
+	
+	function Rectangle (w,h) {
+		this.width = w;
+		this.height = h;
+	}
+	
+	Rectangle.prototype.area  = function () {
+		return this.width * this.height;
+	}
+	
+	function PositionRectangle (x, y, w, h) {
+		
+		this.__proto__.width = w;
+		this.__proto__.height = h;
+		
+		this.x = x;
+		this.y = y;
+		
+		this.__proto__.constructor = PositionRectangle ;
+	}
+	
+	PositionRectangle.prototype = new Rectangle();
+	
+	rect = new PositionRectangle (1 ,4 , 10, 20	);
+	
+
+</script>
+</html>

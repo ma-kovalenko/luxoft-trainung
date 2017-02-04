@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Java Script Courses</title>
+</head>
+<body>
+	<div id="example">
+		
+	</div>
+</body>
+<!-- <script src="scripts/t0-retirementPlan.js"></script>-->
+<!-- <script src="scripts/birds.js"></script> -->
+<script>
+
+	/* function sum is defined below Task 1. Function definitions. */
+	var a = sum(2,2)
+	 
+	function sum(x,y) {
+		return x+y
+	}
+
+	console.log(a);
+
+	/* Task 2. Function return value. */
+
+	function f(p) {
+		if ( p > 0 ) {
+			return p;
+		}
+	}
+
+	x = f(5);
+	console.log(x);
+	x = f(-5);
+	console.log(x);
+
+	/* Task 3.  Function visibility scope. */
+
+	function func(param) {
+		return "First declaration";
+	}
+	function func() {
+		return "Second declaration";
+	}
+	console.log(func(2));
+
+	/* Task 4. Function visibility scope. */
+
+	function f() {
+		var p = 5;
+	}
+
+	f();
+	//console.log(p);
+	
+	/* Task 5. Functions arguments. */
+	
+	var run = function(distance, speed) {
+		speed = speed || 10;
+		var time = distance / speed;
+		return time;
+	}
+	
+	//alert (run()); 
+	//alert (run(5,16)); 
+	//alert (run(5,12,1,4)); 
+	
+	
+	/* Task 6. Functions arguments. */
+	
+	
+	
+	function sum() {
+	  var result = 0;
+	  for (var i = 0; i < arguments.length; i++) {
+		result += arguments[i] / arguments.length ;
+	  }
+
+	  return result;
+	}
+	
+	console.log (sum(1,2,3));
+	
+	/* Task 6. Functions arguments. */
+		
+	function newSum() {
+		var result = 0;
+		for (var i = 0; i < arguments.length; i++) {
+			result += arguments[i] / arguments.length ;
+		}
+
+		return result;
+	}
+
+	console.log(newSum.apply(null, [1, 2, 3]) );
+	
+	
+	/* Task 8. Function closures.. */
+	
+	function makeShout() {
+		var phrase = "Wassup!" 
+		var shout = function() { 
+			console.log (phrase);
+		} 
+		phrase = "Ready!"  
+		return shout;
+	} 
+	shout = makeShout();
+	shout();
+	
+	/* Task 9. Function closures. */
+	
+	function retSum(n) {
+		return function rSum(m) {
+			console.log( n + m ); 
+		}
+	}
+	
+	retSum(1)(3);
+	retSum(5)(10);
+	retSum(1000)(10);
+	
+	/* Task 10. Function closures. */ 
+	
+	function makeProperty(o, name, predicate) {
+		var value;  
+		o["get" + name] = function() { return value; };
+
+		o["set" + name] = function(v) {
+			if (predicate && !predicate(v)) {
+				throw "set" + name + ": invalid value " + v;
+			}
+			else {
+				value = v;
+			}
+		};
+	}
+	
+	var s = {};
+	makeProperty(s, "SurName", function(x) { return typeof x == "string"; });
+	console.log(s);
+	
+	s.setSurName("VVVV");
+	
+	
+</script>
+</html>

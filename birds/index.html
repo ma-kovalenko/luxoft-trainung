@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Java Script Courses Birds Model</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <div class="container theme-showcase" role="main">
+		<div class="jumbotron">
+			<h1>Hello, Friend. Its Best Birds Market!</h1>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>There in Birds Store</h2>
+				<table id="birds-market" class="table">
+					<caption>Birds Market</caption>
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Type</th>
+							<th>Count</th>
+							<th>Price</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- Dynamic Content Here -->
+						
+					</tbody>
+				</table>
+				<hr>
+			</div>
+		</div>
+		<div class="row">
+			<hr>
+			<div class="col-md-6">
+				<div class="form-horizontal">
+					<h2> Add Birds To Market</h2>	
+					<div class="form-group">
+						<div class="col-sm-10">
+							<label class="sr-only" for="bm_type">Bird Type</label>
+							<input type="text" class="form-control" id="bm_type" placeholder="Bird Type">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-10">
+							<label class="sr-only" for="bm_count">Count</label>
+							<input type="text" class="form-control" id="bm_count" placeholder="Count">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-10">
+							<label class="sr-only" for="bm_price">Price</label>
+							<input type="text" class="form-control" id="bm_price" placeholder="Price">
+						</div>
+					</div>
+					<button type="button" id="add_bm_bird" class="btn btn-success">Add Bird</button>	
+				</div>			
+			</div>			
+			<div class="col-md-6">
+				<div class="form-horizontal">
+					<h2> Buy Birds </h2>
+					<div class="form-group">
+						<div class="col-sm-10">
+							<select id="b_select" class="form-control">
+								<option>Duck</option>
+								<option>Doves</option>
+								<option>Owl</option>
+								<option>Finches</option>
+								<option>Chicken</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="b_count" placeholder="Count">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-10">
+							<strong> Total Price $: <span id="total-price"></span></strong>
+						</div>
+					</div>
+					<button type="button" id="buy_birds" class="btn btn-success">Buy Bird</button>					
+				</div>			
+			</div>	
+			<hr>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+			<hr>
+				<h2>Market Transactions</h2>
+				<table class="table">
+					<caption>Market Summary</caption>
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Type</th>
+							<th>Count</th>
+							<th>Price</th>
+							<th>Operation(Sold,Added)</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- Dynamic Content Here -->
+						
+					</tbody>
+				</table>
+			</div>
+		</div>		
+		<div class="row">
+			<div class="col-md-12 text-left">
+				<div class="sumary-wrap">
+					<strong>Total Market Summary $: <span id="total-market-summary"> </span></strong>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="birds.js"></script>
+</html>
