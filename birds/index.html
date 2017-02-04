@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container theme-showcase" role="main">
-		<div class="jumbotron">
+		<div class="jumbotron text-center">
 			<h1>Hello, Friend. Its Best Birds Market!</h1>
 		</div>
 	</div>
@@ -20,7 +20,6 @@
 					<caption>Birds Market</caption>
 					<thead>
 						<tr>
-							<th>#</th>
 							<th>Type</th>
 							<th>Count</th>
 							<th>Price</th>
@@ -37,7 +36,7 @@
 		<div class="row">
 			<hr>
 			<div class="col-md-6">
-				<div class="form-horizontal">
+				<div class="form-horizontal market-form">
 					<h2> Add Birds To Market</h2>	
 					<div class="form-group">
 						<div class="col-sm-10">
@@ -61,7 +60,7 @@
 				</div>			
 			</div>			
 			<div class="col-md-6">
-				<div class="form-horizontal">
+				<div class="form-horizontal market-form"">
 					<h2> Buy Birds </h2>
 					<div class="form-group">
 						<div class="col-sm-10">
@@ -93,11 +92,10 @@
 			<div class="col-md-12">
 			<hr>
 				<h2>Market Transactions</h2>
-				<table class="table">
+				<table id="birds-summary" class="table">
 					<caption>Market Summary</caption>
 					<thead>
 						<tr>
-							<th>#</th>
 							<th>Type</th>
 							<th>Count</th>
 							<th>Price</th>
@@ -114,7 +112,7 @@
 		<div class="row">
 			<div class="col-md-12 text-left">
 				<div class="sumary-wrap">
-					<strong>Total Market Summary $: <span id="total-market-summary"> </span></strong>
+					<strong>Total Market Sales Amount $: <span id="total-market-summary"> </span></strong>
 				</div>
 			</div>
 		</div>

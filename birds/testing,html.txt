@@ -9,16 +9,11 @@ function Bird (t, c, p, o) {
 	this.count = c;
 	this.price = p;
 	this.operation = o;
-}
-
-Bird.prototype.setCount = function(count) {
-	return this.count = count;
-}
 	
-Bird.prototype.setPrice = function(price) {
-	return this.price = price;
+	this.prototype.setCount = function(count) {
+		return this.count = count;
+	}
 }
-
 
 /* UTILS */
 
@@ -78,11 +73,38 @@ function addBirdToMarket() {
 	
 	for (var i = 0; i < objectBirds.length;i++) {
 		if (objectBirds[i].type == bm_Type) {
-			var b = objectBirds[i];
-			b.setCount(bm_Count);
-			b.setPrice(bm_Price);
+			objectBirds[i].count = bm_Count;
+			objectBirds[i].price = bm_Price;
+			watch = false;
+		}
+		
+		else {
+			for (var birds in bird) {
+				var b_type =  bird.b_type;
+				var count =  bird.count;
+				var price =  bird.price;
+				var operation =  bird.operation;
+			}
+			
+			var bird = new Bird(bm_Type, bm_Count, bm_Price, "Added" );
+				
+			objectBirds.push(bird);			
 		}
 	} 
+
+	var row = marketTable.insertRow();
+		
+	var c_1 = row.insertCell(0);
+	c_1.innerHTML = b_type;
+	
+	var c_2 = row.insertCell(1);
+	c_2.innerHTML = count;
+	
+	var c_3 = row.insertCell(2);
+	c_3.innerHTML = price;
+
+	addToSummary(b_type,count,price,operation);
+	clearForm();
 	
 	console.log(objectBirds);
 }
